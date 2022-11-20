@@ -21,6 +21,11 @@ public class Car {
     @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
     private User user;
 
+    public Car(String model, int series) {
+        this.model = model;
+        this.series = series;
+    }
+
     public Car(String model, int series, User user) {
         this.model = model;
         this.series = series;
@@ -68,7 +73,6 @@ public class Car {
                 "id=" + id +
                 ", model='" + model + '\'' +
                 ", series=" + series +
-                ", user=" + user +
                 '}';
     }
 }
