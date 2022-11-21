@@ -31,6 +31,8 @@ public class MainApp {
          System.out.println();
       }
 
+      System.out.println(userService.getModelAndSeries("Audi", 8));
+
       context.close();
    }
 }
